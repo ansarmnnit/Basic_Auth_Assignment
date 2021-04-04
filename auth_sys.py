@@ -1,15 +1,19 @@
 class AuthSystem:
-
+    # Hash Counter for Permission's
     Hash = 3
 
+    # Default Permission's
     PERMISSION_TYPES = {1: "READ",
                         2: "WRITE",
                         3: "DELETE"}
 
+    # User And There Permission's Mapping
     USER_PERMISSION_MAPPING = {}
 
+    # All Existing User
     ALL_USERS = []
 
+    # Initial User
     CURRENT_USER = "ADMIN"
 
     def __init__(self):
@@ -70,6 +74,7 @@ class AuthSystem:
         else:
             print("This Permission Doesn't Exists for current User")
 
+
 obj = AuthSystem()
 choice = 1
 print("hi! you are logged in as admin")
@@ -92,14 +97,3 @@ while choice != 0:
         obj.delete_user_permission()
     elif choice == 5:
         obj.check_all_users_information()
-
-
-
-
-
-
-
-
-
-
-
